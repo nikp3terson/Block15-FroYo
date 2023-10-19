@@ -1,5 +1,5 @@
 const userInputString = prompt(
-    "Please enter some ice cream flavors separated by commas.",
+    "Please enter some froyo flavors separated by commas.",
     " vanilla, vanilla, vanilla, strawberry, coffee, coffee"
 );
 
@@ -7,7 +7,7 @@ const IceCreamFlavors = userInputString.split(",");
 
 
 const IceCreamOrder = {
-    IceCreamFlavors : "Help me!!!"
+    IceCreamFlavors
 }
 
 console.log(Object.keys(IceCreamOrder));
@@ -16,7 +16,7 @@ function OrderCount(IceCreamOrder){
     //    I believe I should be putting a loop in here but I can't for the life of me figure out 
     // the logic to build out a function which counts how many duplicates of each flavor there are. 
     for (const IceCreamFlavors in IceCreamOrder) {
-        console.log(IceCreamFlavors)
+// I imagine more loop-ness should go here. At a loss for what it should be.
     }
     return IceCreamFlavors
 }
@@ -39,3 +39,14 @@ console.log(OrderCount(IceCreamOrder))
 const counts = {}
 IceCreamFlavors.forEach(function (x) { counts[x] = (counts[x] || 0) + 1;})
 console.log(counts)
+
+
+// Update: After looking at the solution I see my biggest mistake is probably 
+// creating an object and putting the array in the object before making the function.
+// Did not think about how the function would need to split the array - that makes sense. 
+// I also understand making the empty object with "const order = {};".
+// and the basic loop for (let i = 0; i < flavorArray.length; i++) { makes sense to me as well
+
+// where I am getting lost is when we enter the 'if' and place the array in the object... after that I 
+// am lost. order[flavorArray[i]] =+ 1 else { order[flavorArray[i]] = 1} is the part that I really
+// need to figure out. 
